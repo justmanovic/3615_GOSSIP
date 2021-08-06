@@ -19,6 +19,7 @@ end
 
 #Création User anonyme
 User.create(first_name: 'Anonymous', last_name: 'Anonymous', age:'50', email: 'anonymous@anonymous.com' , description: 'je suis un anonyme anonyme', city_id: 1, password: 'password1')
+User.create(first_name: 'Jo', last_name: 'Just', age:'50', email: 'jo@jo.com' , description: 'je suis un anonyme anonyme', city_id: 1, password: 'jojojo')
 
 20.times do
   User.create(first_name:Faker::Name.first_name, last_name:Faker::Name.last_name, age:rand(18..90), email:Faker::Internet.email , description:Faker::Lorem.sentences(number: 2).join(" "), city_id:rand(1..City.count), password: ['password', (User.count+1).to_s].join)

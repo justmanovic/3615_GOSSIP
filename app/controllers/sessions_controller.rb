@@ -15,8 +15,8 @@ class SessionsController < ApplicationController
       redirect_to gossip_index_path
 
     else
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      flash[:alert] = "User not found."
+      render :new
     end
   end
 
